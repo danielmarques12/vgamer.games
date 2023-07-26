@@ -1,15 +1,47 @@
 ---
+import { SEO } from 'astro-seo';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>vgamer.games</title>
+
+    <style is:global>
+      body {
+        font-family: 'oddval';
+        background-image: url('/vgamer.jpeg');
+        background-size: 20%;
+      }
+
+      @font-face {
+        font-family: 'oddval';
+        src: url('/fonts/oddval.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
+    <SEO
+      title='vgamer.games'
+      description='vgamer'
+      openGraph={{
+        basic: {
+          title: 'vgamer',
+          type: 'vgamer',
+          image: 'public/vgamer.jpeg',
+          url: 'https://vgamer.games',
+        },
+      }}
+    />
+  </head>
+  <body>
+    <div class='h-screen flex justify-center items-center'>
+      <p class='text-6xl text-white'>vgamer</p>
+    </div>
+  </body>
 </html>
